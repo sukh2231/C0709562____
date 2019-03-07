@@ -4,88 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
-
+namespace DelegatesExercises
 {
-
-    class Program
-
+    public class DelegateExercises
     {
-
-        static void Main(string[] args)
-
+        public delegate void MyDelegate();
+        void method(int i)
         {
-
-            //Student name Sukhraj Singh Student ID C0709562
-
-            //CSD3354 Section2
-
-            //Assignment 2
-
-            //March 7,2019
-
+            Console.WriteLine("Method1");
+            Console.ReadLine();
         }
-
-    }
-
-}
-
-
-
-public class DelegateExercises
-
-{
-
-    public delegate void MyDelegate();
-
-
-
-    void Method1()
-
-    {
-
-        Console.WriteLine("Method1");
-
-        Console.ReadLine();
-
-
-
-    }
-
-
-
-    public void Method2()
-
-    {
-
-        MyDelegate myDelegate = new MyDelegate(Method1);
-
-        myDelegate();
-
-
-
-    }
-
-}
-
-
-
-namespace DelegatesAndEvents
-
-{
-
-    class Program
-
-    {
-
-        static void Main(string[] args)
-
+        public void Method2()
         {
-
-            // TO DO: Call Method2 from the DelegateExercises Class
-
+            MyDelegate myDelegate = new MyDelegate(Method1);
+            myDelegate();
         }
-
     }
-
 }
